@@ -1,0 +1,24 @@
+{
+  "dev": {
+    "main": "app.ts",
+    "start_cron": "npx ts-node",
+    "start_server": "npx ts-node-dev --respawn --transpile-only",
+    "start_console": "npx ts-node",
+    "jobs_path": "backend/jobs"
+  },
+  "prod": {
+    "main": "build/app.js",
+    "start_cron": "pm2 start",
+    "stop_cron": "pm2 stop",
+    "start_server": "pm2 start",
+    "stop_server": "pm2 stop",
+    "start_console": "node",
+    "jobs_path": "backend/jobs"
+  },
+  "stacks": {
+    "tsc": [
+      "rm -rf build",
+      "tsc -p tsconfig.json"
+    ]
+  }
+}

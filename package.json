@@ -1,0 +1,33 @@
+{
+  "name": "new-app-lite-ts",
+  "version": "1.0.0",
+  "description": "XpresserJs Typescript Lite App (No Views) Boilerplate ",
+  "main": "app.ts",
+  "repository": "https://github.com/xpresserjs/new-app-lite-ts",
+  "author": "xpresserjs",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "npm run build && node build/app.js",
+    "build": "npx xjs @stack tsc",
+    "ts-watch": "npx tsc --watch",
+    "ts-dev": "npx ts-node-dev --respawn app.ts",
+    "ts-events-server": "npx ts-node-dev --respawn events-server.ts",
+    "js-dev": "npx nodemon build/app.js",
+    "js-events-server": "npx nodemon build/events-server.js"
+  },
+  "dependencies": {
+    "@xpresser/events-server": "^0.1.12",
+    "sharp": "^0.29.3",
+    "xpresser": "^0.25.4"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.1",
+    "@types/sharp": "^0.29.4",
+    "nodemon": "^2.0.14",
+    "prettier": "^2.5.1",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.4.4",
+    "xjs-cli": "^1.0.2"
+  }
+}
