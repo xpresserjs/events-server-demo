@@ -18,7 +18,7 @@
 
 The control panel a simple web interface to see all failed events and retry them.
 
-Url: [http://localhost:3000/__es__](http://localhost:3000/__es__)
+Url: [`http://localhost:3000/__es__`](http://localhost:3000/__es__)
 
 Running `xjs routes` will show all the routes registered in the application. You will notice routes with `__es__`
 prefix... These are the events server routes.
