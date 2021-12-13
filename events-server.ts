@@ -9,7 +9,7 @@ const eventsServer = new EventsServer("SECRET_KEY", $);
  */
 eventsServer.on("hi", ({ $, runEvent }, ...args) => {
     $.logSuccess(`Event "hi" was fired with arguments: ${args.join(", ")}`);
-    // in others there is a function called runEvent that you can use to run other events
+    // runEvent is a function that can be used to run other events.
     runEvent("bye");
 });
 
@@ -28,4 +28,5 @@ eventsServer.on("bye", ({ $ }) => {
  */
 eventsServer.on("compress", "ImageEvents@compress");
 
+// Start Listening for events
 eventsServer.startListening();
